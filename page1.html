@@ -175,7 +175,7 @@
         <iframe src="https://docs.google.com/gview?embedded=true&url=https://www.pti-ccit.com/PTI.Files/QRCodeBrochure/PTI-E-Scan-615-Brochure.pdf#toolbar=0" class="pdf-container"></iframe>
       </div>
       <div class="modal-footer justify-content-center">
-        <button onclick="window.location.href='https://www.pti-ccit.com/PTI.Files/QRCodeBrochure/PTI-E-Scan-615-Brochure.pdf'" type="button" class="btn btn-primary">Download</button>
+        <button onclick="downloadFile('https://www.pti-ccit.com/PTI.Files/QRCodeBrochure/PTI-E-Scan-615-Brochure.pdf')" type="button" class="btn btn-primary">Download</button>
       </div>
    
     </div>
@@ -663,7 +663,16 @@
  </section>
  
  
-
+<script>
+function downloadFile(url) {
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = '';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+</script>
 
 
  <!-- Optional JavaScript -->
